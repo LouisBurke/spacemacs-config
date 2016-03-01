@@ -216,7 +216,8 @@ layers configuration. You are free to put any user code."
   (setq clojure-enable-fancify-symbols t)
   (setq-default js2-basic-offset 2)
   (setq-default css-indent-offset 2)
-  "Disables the magic insertion of annoying '# coding: utf-8' comment."
+  "Disables the magic insertion of annoying '# coding: utf-8' comment.
+   See `M-x customize-group RET ruby RET` for more options."
   (setq ruby-insert-encoding-magic-comment nil)
 )
 
