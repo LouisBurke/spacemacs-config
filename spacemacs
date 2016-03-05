@@ -29,6 +29,7 @@ values."
      better-defaults
      ;;cider
      clojure
+     elixir
      emacs-lisp
      git
      markdown
@@ -210,10 +211,12 @@ user code."
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
-layers configuration. You are free to put any user code."
+layers configuration. You are free to put any user code.
+Also to query variables use SPC h d v"
   (global-linum-mode t)
   (linum-relative-toggle)
   (setq clojure-enable-fancify-symbols t)
+  (setq javascript-indent-level 2)
   (setq-default js2-basic-offset 2)
   (setq-default css-indent-offset 2)
 )
