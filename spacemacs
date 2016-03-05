@@ -219,6 +219,10 @@ Also to query variables use SPC h d v"
   (setq javascript-indent-level 2)
   (setq-default js2-basic-offset 2)
   (setq-default css-indent-offset 2)
+  "Disables the magic insertion of annoying '# coding: utf-8' comment.
+   See 'M-x customize-group RET ruby RET' for customizable variables
+   in ruby/python/etc."
+  (setq ruby-insert-encoding-magic-comment nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
