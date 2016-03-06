@@ -25,14 +25,20 @@ values."
      ;; ----------------------------------------------------------------
      ;; auto-completion
      ;; better-defaults
+     emacs-lisp
+     markdown
+     syntax-checking
      auto-completion
+     erlang
+     elixir
+     git
+     dash
+     html
+     org
+     colors
      better-defaults
      ;;cider
      clojure
-     elixir
-     emacs-lisp
-     git
-     markdown
      python
      haskell
      latex
@@ -40,13 +46,10 @@ values."
      ruby
      yaml
      javascript
-     html
-     ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
@@ -211,18 +214,19 @@ user code."
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
-layers configuration. You are free to put any user code.
-Also to query variables use SPC h d v"
+layers configuration. You are free to put any user code."
   (global-linum-mode t)
   (linum-relative-toggle)
   (setq clojure-enable-fancify-symbols t)
   (setq javascript-indent-level 2)
   (setq-default js2-basic-offset 2)
   (setq-default css-indent-offset 2)
-  "Disables the magic insertion of annoying '# coding: utf-8' comment.
-   See 'M-x customize-group RET ruby RET' for customizable variables
-   in ruby/python/etc."
+  ;; Disables the magic insertion of annoying '# coding: utf-8' comment.
+  ;; See 'M-x customize-group RET ruby RET' for customizable variables
+  ;; in ruby/python/etc.
+  ;; Also to query variables use SPC h d v
   (setq ruby-insert-encoding-magic-comment nil)
+  (setq-default elixir-smie-indent-basic 4)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
